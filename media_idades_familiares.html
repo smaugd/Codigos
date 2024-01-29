@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<script>
+    function pulaLinha() {
+        document.write('<br>');
+        document.write('<br>');
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    // Aqui seria um código sem automatização do loop While
+    // var idadeCaio = 23
+    // var idadeTarcila = 26
+    // var idadeLu = 49
+    // var idadeCarlos = 50
+    // var totalMedia = (idadeCaio + idadeTarcila + idadeLu + idadeCarlos) / 4
+    // var resultado = totalMedia
+    // mostra(resultado)
+
+    var quantidadeFamiliar = parseInt(prompt('Informe Quantos parentes serão calculados'))
+
+    var quantidadePerguntas = 1
+    var idadeTotal = 1
+    while(quantidadePerguntas <=quantidadeFamiliar){
+        var idadeFamiliar = parseInt(prompt('Informe a idade dos seus parentes'))
+        idadeTotal = idadeTotal + idadeFamiliar
+        quantidadePerguntas++
+    }
+
+    var calculoMedia = idadeTotal / quantidadeFamiliar
+    mostra('A média das idades dos familiares é ' + parseInt(calculoMedia))
+    
+</script>

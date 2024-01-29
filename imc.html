@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<meta chartset="UTF-8">
+
+<script>
+    function pulaLinha() {
+        document.write('<br>');
+        document.write('<br>');
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function calculoImc(peso, altura) {
+    var imc = peso / (altura * altura);
+    imc = Math.round(imc)
+    mostra('Olá ' + nome + ', eu sou a sua calculadora de IMC personalizada!')
+    if (imc < 18.4) {
+        mostra('Você está um(a) frangolino(a)! Seu IMC é de ' + imc)
+    }
+    else if (imc >= 18.5 && imc <=24.9) {
+        mostra('Você está com peso normal! Seu IMC é de ' + imc)
+    }
+    else if (imc >= 25 && imc <=29.9) {
+        mostra('Você está engordando! Seu IMC é de ' + imc)
+    }
+    else if (imc >= 30 && imc <=39.9) {
+        mostra('Bora treinar, a coisa ta ficando séria! ' + imc)
+    }
+    else if (imc >= 40) {
+        mostra('Montanha' + imc)
+    }
+    else {
+        mostra('Digite um número válido')
+    }       
+    return (imc)
+    }
+
+var nome = prompt('Informe seu nome')
+var peso = prompt(nome + ' Qual o seu peso?')
+var altura = prompt(Nome + ' Qual a sua altura?')
+
+var imcCalculado = calculoImc(peso, altura)
+</script>
+

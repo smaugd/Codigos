@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<input/>
+<button>Confira o botão de Tarcila</button>
+<script> 
+var segredo = 5;
+var input = document.querySelector('input');
+// Os valores das variáveis devem ficar fora da função.
+function verifica() {
+    if(input.value == segredo) {
+        alert('Você Acertou!!!');
+}   else {
+        alert('Você errou!!!');
+}
+}
+// A função Verifica, irá verificar ao clicar o botão se o número digitado é igual ao segredo.
+var botao = document.querySelector('button');
+botao.onclick = verifica;
+// Neste caso, a função 'verifica()' está sendo chamada sem o parênteses, pois dessa forma teremos acesso apenas ao código escrito na função e não sera executada assim que a página carregar
+</script>
+
+

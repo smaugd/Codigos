@@ -1,0 +1,18 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha() {
+        document.write('<br>');
+        document.write('<br>');
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var ano_Copa = 1930;
+    while (ano_Copa <= 2024) {
+        mostra('Os anos de copa foram ' + ano_Copa)
+        ano_Copa = ano_Copa + 4
+    }
+</script>

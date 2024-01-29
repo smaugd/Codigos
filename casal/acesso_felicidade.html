@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta lang="pt-BR" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Botão de Felicidade</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Jost&family=Krona+One&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+		<style>
+			body {
+				background-color: #fff1d0;
+				font-family: 'Jost', sans-serif;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100vh;
+			}
+
+			.botao {
+				text-align: center;
+				color: #333;
+			}
+
+			h1 {
+				
+				font-size: 24px;
+				margin-bottom: 20px;
+				color: #5e4d42;
+			}
+
+			button {
+				background-color: #ffcc00;
+				padding: 10px 20px;
+				font-size: 18px;
+				color: #fff;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+			}
+
+			button:hover {
+				background-color: #e0b200;
+			}
+			.fotos {
+				visibility: hidden;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+				justify-content: center;
+			}
+
+			.fotos img {
+				max-width: 100%;
+				height: auto;
+				border-radius: 8px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="botao">
+			<h1>
+				Meus parabéns!! <br>
+				Somente você poderá ter acesso ao arquivo confidencial da felicidade..
+			</h1>
+			<button>Clique aqui</button>
+		</div>
+		<div class="fotos" id="id_fotos">
+			<img src="Foto1.jpg" alt="Foto de Caio e Tarcila 1" />
+			<img src="Foto2.jpg" alt="Foto de Caio e Tarcila 2" />
+			<img src="Foto3.jpg" alt="Foto de Caio e Tarcila 3" />
+			<img src="Foto4.jpg" alt="Foto de Caio e Tarcila 4" />
+			<img src="Foto5.jpg" alt="Foto de Caio e Tarcila 5" />
+			<img src="Foto6.jpg" alt="Foto de Caio e Tarcila 6" />
+			<img src="Foto7.jpg" alt="Foto de Caio e Tarcila 7" />
+			<img src="Foto8.jpg" alt="Foto de Caio e Tarcila 8" />
+			<img src="Foto9.jpg" alt="Foto de Caio e Tarcila 9" />
+			<img src="Foto10.jpg" alt="Foto de Caio e Tarcila 10" />
+			<img src="Foto11.jpg" alt="Foto de Caio e Tarcila 11" />
+			<img src="Foto12.jpg" alt="Foto de Caio e Tarcila 12" />
+			<img src="Foto13.jpg" alt="Foto de Caio e Tarcila 13" />
+			<img src="Foto14.jpg" alt="Foto de Caio e Tarcila 14" />
+			<img src="Foto15.jpg" alt="Foto de Caio e Tarcila 15" />
+			<img src="Foto16.jpg" alt="Foto de Caio e Tarcila 16" />
+			<img src="Foto17.jpg" alt="Foto de Caio e Tarcila 17" />
+			<img src="Foto18.jpg" alt="Foto de Caio e Tarcila 18" />
+			<img src="Foto19.jpg" alt="Foto de Caio e Tarcila 19" />
+		</div>
+		<script>
+			function mostrarImagem() {
+				var imagens = document.getElementById("id_fotos");
+				if (imagens.style.visibility === "hidden") {
+					imagens.style.visibility = "visible";
+				} else {
+					imagens.style.visibility = "hidden";
+				}
+			}
+			var nomeAceito = "Tarcila";
+			var a = true;
+			while (a) {
+				var nome = prompt("Quem é você?");
+				if (nome === nomeAceito) {
+					alert(
+						"Parabéns!!!\n" +
+							" Você é a escolhida para ter a Felicidade Infinita ao lado do Amor da sua Vida <3"
+					);
+					break;
+				} else if (nome == "tarcila") {
+					alert("Digite com T maiúsculo");
+				} else if (nome == "Caio" || nome == "caio") {
+					alert("Esse é o amor da sua Vida!");
+				} else {
+					alert("Você não é digno(a) da Felicidade ");
+				}
+			}
+			var botao = document.querySelector("button");
+			botao.focus()
+			botao.addEventListener("click", mostrarImagem);
+		</script>
+	</body>
+</html>
